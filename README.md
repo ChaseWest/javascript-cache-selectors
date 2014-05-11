@@ -26,18 +26,21 @@ Small, simple to use library for caching selectors for better performance.
 ######Out
 -  **node(s)** - [DOM node(s)] Returned node(s) that were stored within `jsc.cache()`
 
-#####Example
+#####[Example](http://jsfiddle.net/ChaseWest/gR9U3/2/)
 
 ```javascript
-  //grab the first ul, store it in _cache and return the key for that object
-  var ulKey = jsc.cache("ul");
+  //grab the ul with id innerUL, store it in _cache and return the key for that object
+  var ulKey = jsc.cache("ul#innerUL");
 
-  //get all the li elements within the cached ul above
-  var liKey = jsc.cache("li", jsc.get(ulKey), true);  
+  //get all the li with class selected within the cached ul above
+  var liKey = jsc.cache("li.selected", jsc.get(ulKey), true);  
 
   //Get the DOM node(s) that were cached above
   var ul = jsc.get(ulKey);
   var li = jsc.get(liKey);
+
+  console.log(ul);
+  console.log(li);
 ```
 
 ###Feedback
