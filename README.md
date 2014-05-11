@@ -30,14 +30,14 @@ Small, simple to use library for caching selectors for better performance.
 
 ```javascript
   //grab the first ul, store it in _cache and return the key for that object
-  var ulKey = jcs.cache("ul");
+  var ulKey = jsc.cache("ul");
 
   //get all the li elements within the cached ul above
-  var liKey = jcs.cache("li", get(ulKey), true);  
+  var liKey = jsc.cache("li", get(ulKey), true);  
 
   //Get the DOM node(s) that were cached above
-  var ul = jcs.get(ulKey);
-  var li = jcs.get(liKey);
+  var ul = jsc.get(ulKey);
+  var li = jsc.get(liKey);
 ```
 
 ###Feedback
